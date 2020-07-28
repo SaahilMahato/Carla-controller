@@ -1,6 +1,50 @@
 html, body{
+
     font-family: 'Poppins', sans-serif;
-    background-color: blueviolet;
+    background-color: #2e2e2e;
     color: whitesmoke;
+    margin: 0;
+    padding: 0;
   }
+
+header{
+  height: 90px;
+  background: linear-gradient(145deg, #313131, #292929);
+  box-shadow:  16px 16px 29px #191919, 
+             -16px -16px 29px #434343;
+
+  color: wheat;
+  padding-top: 1px;
+  padding-left: 6px;
+  text-align: justify;
+  font-size: 20px;
+}
+
+#carla-logo{
+  background:url(img/carla-logo.png);
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
+  width: 85px;
+  height: 80px;
+  margin: 0 3px;
+  filter: invert(1);
+  float: left;
+  border-radius: 23px;
+  box-shadow:  5px 5px 32px #e0e0e0, 
+             -5px -5px 32px #ddd5d5;
+
+}
+
+#spawn-box{
+  width: 200px;
+  height: 100px;
+  margin-top: 40px;
+  margin-left: 50px;
+  padding: 60px 35px 35px 35px;
+  border-radius: 40px;
+  background: linear-gradient(145deg, #292929, #313131);
+  box-shadow:  23px 23px 54px #191919, 
+             -23px -23px 54px #434343;
+  
+}
   

@@ -5,4 +5,4 @@ eel.init("Core")
 def hi(a):
     print(a)
 
-eel.start('main.html',size=(300,200))
+eel.start('main.html',size=(300,400))
