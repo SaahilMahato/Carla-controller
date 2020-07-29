@@ -1,8 +1,8 @@
 html, body{
 
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #2e2e2e;
-    color: whitesmoke;
+    color: white;
     margin: 0;
     padding: 0;
   }
@@ -13,11 +13,12 @@ header{
   box-shadow:  16px 16px 29px #191919, 
              -16px -16px 29px #434343;
 
-  color: wheat;
+  color: white;
   padding-top: 1px;
   padding-left: 6px;
   text-align: justify;
   font-size: 20px;
+  z-index: -100;
 }
 
 #carla-logo{
@@ -29,13 +30,27 @@ header{
   margin: 0 3px;
   filter: invert(1);
   float: left;
-  border-radius: 23px;
-  box-shadow:  5px 5px 32px #e0e0e0, 
-             -5px -5px 32px #ddd5d5;
 
 }
 
 #spawn-box{
+  font-size: 25px;
+  width: 200px;
+  height: 300px;
+  margin-top: 40px;
+  margin-left: 50px;
+  padding: 30px 35px 35px 35px;
+  border-radius: 40px;
+  background: linear-gradient(145deg, #292929, #313131);
+  box-shadow:  23px 23px 54px #191919, 
+             -23px -23px 54px #434343;
+  float: left;  
+  text-align: center;
+  font-weight: bold;
+}
+
+
+#speedmeter{
   width: 200px;
   height: 100px;
   margin-top: 40px;
@@ -45,6 +60,6 @@ header{
   background: linear-gradient(145deg, #292929, #313131);
   box-shadow:  23px 23px 54px #191919, 
              -23px -23px 54px #434343;
+  float: left;
   
 }
-  
