@@ -1,17 +1,17 @@
 html, body{
 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #2e2e2e;
-    color: white;
+    background-color: #33373d;
+    color: #d1d1d1;
     margin: 0;
     padding: 0;
   }
 
 header{
   height: 90px;
-  background: linear-gradient(145deg, #313131, #292929);
+  background: linear-gradient(145deg, #33373d, #33373d);
   box-shadow:  16px 16px 29px #191919, 
-             -16px -16px 29px #434343;
+             -16px -16px 29px #33373d;
 
   color: white;
   padding-top: 1px;
@@ -33,6 +33,12 @@ header{
 
 }
 
+.control-hr{
+  margin-top: -1px;
+  margin-bottom: -1px;
+  border-color:#ABABAB;
+}
+
 #Toggle-buttons-container{
   font-size: 25px;
   width: 300px;
@@ -40,17 +46,17 @@ header{
   margin-top: 40px;
   margin-left: 50px;
   padding: 30px 35px 35px 35px;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #292929, #313131);
-  box-shadow:  23px 23px 54px #191919, 
-             -23px -23px 54px #434343;
+  border-radius: 50px;
+background: #26292f;
+box-shadow: inset 8px 8px 16px #1d1f23, 
+            inset -8px -8px 16px #30333b;
   float: left;  
   text-align: center;
   font-weight: bold;
 }
 
 .button-container{
-  background-color: #434343;
+  
   height: 60px;
   margin-top: 6px;
   border-radius: 10px;
@@ -143,10 +149,10 @@ header{
   margin-top: 40px;
   margin-left: 50px;
   padding: 60px 35px 35px 35px;
-  border-radius: 40px;
-  background: linear-gradient(145deg, #292929, #313131);
-  box-shadow:  23px 23px 54px #191919, 
-             -23px -23px 54px #434343;
+  border-radius: 50px;
+background: #26292f;
+box-shadow: inset 8px 8px 16px #1d1f23, 
+            inset -8px -8px 16px #30333b;
   float: left;
   
 }
