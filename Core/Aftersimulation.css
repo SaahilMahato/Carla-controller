@@ -33,78 +33,27 @@ header{
 
 }
 
-.map-container{
-  width: 200px;
-  height: 200px;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  border-radius: 53px;
-background: #26292f;
-box-shadow:  11px 11px 22px #1b1e22, 
-             -11px -11px 22px #31343c;
-  color: #00ff57;
+.control-hr{
+  margin-top: -1px;
+  margin-bottom: -1px;
+  border-color:#ABABAB;
 }
-.configuration-container{
+
+#Toggle-buttons-container{
   font-size: 25px;
-  width: 600px;
-  height: 550px;
-  margin-top: 40px;
-  margin-left: 50px;
-  padding: 30px 35px 35px 35px;
-  border-radius: 50px;
-background: #26292f;
-box-shadow: inset 8px 8px 16px #1d1f23, 
-            inset -8px -8px 16px #30333b;
-  float: left;  
-  text-align: center;
-  font-weight: bold;
-}
-
-.events-container{
-  font-size: 25px;
-  width: 600px;
-  height: 550px;
-  margin-top: 40px;
-  margin-left: 50px;
-  padding: 30px 35px 35px 35px;
-  border-radius: 50px;
-background: #26292f;
-box-shadow: inset 8px 8px 16px #1d1f23, 
-            inset -8px -8px 16px #30333b;
-  float: left;  
-  text-align: center;
-  font-weight: bold;
-}
-
-.Weather{
-  width: 260px;
-  height: 300px;
-  padding-top: 20px;
-  float: left;
-  padding-top: 10px;
-  border-radius: 53px;
-
-  background: #26292f;
-  box-shadow: inset 8px 8px 16px #191b1f, 
-              inset -8px -8px 16px #33373f;
-
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-}
-.car-container{
   width: 300px;
-  height: 300px;
-  float: left;
-  margin-left: 40px;
-  border-radius: 53px;
+  height: 500px;
+  margin-top: 40px;
+  margin-left: 50px;
+  padding: 30px 35px 35px 35px;
+  border-radius: 50px;
 background: #26292f;
-box-shadow:  11px 11px 22px #1b1e22, 
-             -11px -11px 22px #31343c;
-  color: #00ff57;
- 
+box-shadow: inset 8px 8px 16px #1d1f23, 
+            inset -8px -8px 16px #30333b;
+  float: left;  
+  text-align: center;
+  font-weight: bold;
 }
-
 
 .button-container{
   
@@ -127,7 +76,7 @@ box-shadow:  11px 11px 22px #1b1e22,
 .button-container1.toggle-button-img.img1{
   background: url(img/car.png);
   background-repeat: no-repeat;
-  background-size: 50px 50px;
+  background-size: 55px 55px;
 
 }
 
@@ -184,13 +133,36 @@ box-shadow:  11px 11px 22px #1b1e22,
 .button-container1.toggle-button-img.img2{
   background: url(img/Rain.png);
   background-repeat: no-repeat;
-  background-size: 50px 50px;
+  background-size: 55px 55px;
   
 }
 
 .toggle-text{
   text-align: left;
-  font-size: 16px;
+  font-size: 18px;
   padding-left: 10px;
 }
 
+#speedmeter{
+  width: 200px;
+  height: 100px;
+  margin-top: 40px;
+  margin-left: 50px;
+  padding-top: 20px;
+  border-radius: 100px;
+background: #26292f;
+box-shadow: inset 8px 8px 16px #1d1f23, 
+            inset -8px -8px 16px #30333b;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+.speedmeter-speedbar{
+  font-size: 40px;
+  border-radius: 100px;
+background: #26292f;
+box-shadow: inset 8px 8px 16px #1d1f23, 
+            inset -8px -8px 16px #30333b;
+ 
+}
