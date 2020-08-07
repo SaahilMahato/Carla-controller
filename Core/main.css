@@ -34,17 +34,93 @@ header{
 }
 
 .map-container{
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 210px;
   margin-bottom: 20px;
   margin-top: 10px;
+  margin-left: 30px;
+  float: left;
+  overflow: hidden;
   border-radius: 53px;
-background: #26292f;
-box-shadow:  11px 11px 22px #1b1e22, 
-             -11px -11px 22px #31343c;
-  color: #00ff57;
+  background: #26292f;
+  box-shadow: inset 8px 8px 16px #191b1f, 
+              inset -8px -8px 16px #33373f;
+  color: #d1d1d1;
 }
-.configuration-container{
+
+.map-text{
+  margin-bottom: -20px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.img-container{
+  width: 1000px;
+  height: 150px;
+  margin-left: 24px;
+
+  position: relative;
+  padding-bottom: 5px;
+  transition: left 2s;
+  margin-top: 8px;
+  -webkit-transition: left 2s;;
+}
+
+.slider-image{
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+
+  width: 150px;
+  height: 150px;
+  border-radius: 40px;
+}
+
+.map-button-container{
+  margin-top: -50px;
+  position: relative;
+  
+}
+
+.slider-button{
+  display: inline-block;
+  margin-top: -20px;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: seashell;
+}
+
+#slider-image1:target ~.img-container{
+    left: 0px;
+}
+
+#slider-image2:target~.img-container{
+  left: -165px;
+}
+
+#slider-image3:target~.img-container{
+  left: -330px;
+}
+.extras-container{
+  width: 300px;
+  height: 150px;
+  float: left;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 20px;
+background: #26292f;
+box-shadow:  inset 8px 8px 16px #191b1f, 
+inset -8px -8px 16px #33373f;
+  color: #d1d1d1;}
+
+.extras-horizontal-container{
+  width: 300px;
+  margin-top: 5px;
+}
+
+  .configuration-container{
   font-size: 25px;
   width: 600px;
   height: 550px;
@@ -76,6 +152,15 @@ box-shadow: inset 8px 8px 16px #1d1f23,
   font-weight: bold;
 }
 
+
+.extras-container-text{
+  text-align: left;
+  float: left;
+  margin-top: 10px;
+  margin-left: 30px;
+  font-size: 16px;
+  padding-left: 10px;
+}
 .Weather{
   width: 260px;
   height: 300px;
@@ -94,9 +179,11 @@ box-shadow: inset 8px 8px 16px #1d1f23,
 }
 .car-container{
   width: 300px;
-  height: 300px;
+  height: 210px;
+  overflow: hidden;
   float: left;
   margin-left: 40px;
+  margin-top: 40px;
   border-radius: 53px;
 background: #26292f;
 box-shadow:  11px 11px 22px #1b1e22, 
@@ -131,7 +218,7 @@ box-shadow:  11px 11px 22px #1b1e22,
 
 }
 
-/* Button 1*/
+/*Weather Button*/
 .label {
   display: inline-flex;
   align-items: center;
@@ -140,10 +227,6 @@ box-shadow:  11px 11px 22px #1b1e22,
   float: right;
   margin-top: 10px;
   margin-right: 10px;
-}
-
-.label-text {
-  margin-left: 16px;
 }
 
 .toggle {
@@ -194,3 +277,49 @@ box-shadow:  11px 11px 22px #1b1e22,
   padding-left: 10px;
 }
 
+/*Extras Button*/
+.extras-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #394a56;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 30px;
+}
+
+.extras-toggle {
+  isolation: isolate;
+  position: relative;
+  height: 25px;
+  width: 55px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow:
+    -8px -4px 8px 0px #313131,
+    8px 4px 12px 0px #292929,
+    4px 4px 4px 0px #292929 inset,
+    -4px -4px 4px 0px #313131 inset;
+}
+
+.extras-toggle-state {
+  display: none;
+}
+
+.extras-indicator {
+  height: 100%;
+  width: 200%;
+  background: #ecf0f3;
+  border-radius: 15px;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+  box-shadow:
+    -8px -4px 8px 0px #666464,
+    8px 4px 12px 0px #929394;
+}
+
+.extras-toggle-state:checked ~ .extras-indicator {
+  transform: translate3d(25%, 0, 0);
+  background:#00ff57 ;
+}
