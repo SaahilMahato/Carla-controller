@@ -9,6 +9,67 @@
         <div class="round-font" id="carla-logo">
 
         </div>
+        <script type="text/javascript">
+            function carbtnonclick(value)
+            {
+                var button = document.getElementsByClassName("car-slider-button");
+                var carcontainer = document.getElementsByClassName("car-img-container");
+                if(value=='1')
+                {
+                    carcontainer[0].style.left = "30px";
+                    button[0].style.background = "#00ff57";
+                    button[1].style.background = "#ecf0f3";
+                    button[2].style.background = "#ecf0f3";
+                }
+                if(value =='2'){
+                    carcontainer[0].style.left = "-165px";
+                    button[1].style.background = "#00ff57";
+                    button[0].style.background = "#ecf0f3";
+                    button[2].style.background = "#ecf0f3";
+                }                
+                if(value =='3'){
+                    carcontainer[0].style.left = "-430px";
+                    button[2].style.background = "#00ff57";
+                    button[0].style.background = "#ecf0f3";
+                    button[1].style.background = "#ecf0f3";
+                }
+
+            }
+            function mapbtncontainer(value)
+            {
+                var mapbutton = document.getElementsByClassName("map-slider-button");
+                var mapcontainer = document.getElementsByClassName("img-container");
+                if(value=='1'){
+                    mapcontainer[0].style.left = "0px";
+                    mapbutton[0].style.background = "#00ff57";
+                    mapbutton[1].style.background = "#ecf0f3";
+                    mapbutton[2].style.background = "#ecf0f3";
+                    
+                    }
+                if(value =='2'){
+                    mapcontainer[0].style.left = "-165px";
+                    mapbutton[1].style.background = "#00ff57";
+                    mapbutton[0].style.background = "#ecf0f3";
+                    mapbutton[2].style.background = "#ecf0f3";
+                }                
+                if(value =='3'){
+                    mapcontainer[0].style.left = "-330px";
+                    mapbutton[2].style.background = "#00ff57";
+                    mapbutton[0].style.background = "#ecf0f3";
+                    mapbutton[1].style.background = "#ecf0f3";
+                }
+            }
+
+            function applyclick(data){
+                var element = document.getElementsByClassName("applybuttoninput");
+                element[0].style.boxShadow = "inset 10px 10px 20px #191b1f,inset -10px -10px 20px #33373f";
+                setInterval(function(){element[0].style.boxShadow = "3px 3px 8px #191b1f,-3px -3px 8px #33373f";},1000)
+                
+
+            }
+            
+
+        </script>
     </header>
     <div class ="configuration-container">
         <div>
@@ -53,18 +114,15 @@
         </div>
         <div class="map-container">
             <div class="map-text">Select Map</div>
-                <span id="slider-image1" style="padding: 0%;"></span>
-                <span id="slider-image2" style="padding: 0%;"></span>
-                <span id="slider-image3" style="padding: 0%;"></span>
-                <div class="img-container">
+                <div class="img-container" style="left: -165px;"> 
                     <img src="img/track1.png" class="slider-image">
                     <img src="img/track1.png" class="slider-image">
                     <img src="img/track1.png" class="slider-image">
                 </div>
                 <div class="map-button-container">
-                    <a href="#slider-image1" class="slider-button"></a>
-                    <a href="#slider-image2" class="slider-button"></a>
-                    <a href="#slider-image3" class="slider-button"></a>
+                    <input type="button" onclick="mapbtncontainer('1')" class="map-slider-button" id="map-button1">
+                    <input type="button" onclick="mapbtncontainer('2')" class="map-slider-button" id="map-button2">
+                    <input type="button" onclick="mapbtncontainer('3')" class="map-slider-button" id="map-button3">
                 </div>
             
         </div>
@@ -72,78 +130,82 @@
 
         <div class="Weather">
             Weather Config
-            <div class="button-container">
-                <div class="button-container1 toggle-button-img img2">
+            <div class="weather-button-container">
+                <div class="weather-button-container1 weather-toggle-button-img img1">
                     
                 </div>
-                <div class="button-container1 toggle-text">
+                <div class="weather-button-container1 weather-toggle-text">
                      Active Rain 
                 </div>
                 <div>
-                    <label class="label">
-                        <div class="toggle">
-                          <input class="toggle-state" type="checkbox" name="check" value="check" />
-                          <div class="indicator"></div>
+                    <label class="weather-label">
+                        <div class="weather-toggle">
+                          <input class="weather-toggle-state" type="checkbox" name="check" value="check" />
+                          <div class="weather-indicator"></div>
                         </div>
                     </label>
                 </div>
             </div> 
     
-            <div class="button-container">
-                <div class="button-container1 toggle-button-img img1">
+            <div class="weather-button-container">
+                <div class="weather-button-container1 weather-toggle-button-img img2">
                     
                 </div>
-                <div class="button-container1 toggle-text">
+                <div class="weather-button-container1 weather-toggle-text">
                     Sunny Day
                 </div>
                 <div>
-                    <label class="label">
-                        <div class="toggle">
-                          <input class="toggle-state" type="checkbox" name="check" value="check" />
-                          <div class="indicator"></div>
+                    <label class="weather-label">
+                        <div class="weather-toggle">
+                          <input class="weather-toggle-state" type="checkbox" name="check" value="check" />
+                          <div class="weather-indicator"></div>
                         </div>
                     </label>
                 </div>
             </div> 
         
-            <div class="button-container">
-                <div class="button-container1 toggle-button-img img1">
+            <div class="weather-button-container">
+                <div class="weather-button-container1 weather-toggle-button-img img3">
                     
                 </div>
-                <div class="button-container1 toggle-text">
+                <div class="weather-button-container1 weather-toggle-text">
                     Foggy Day
                 </div>
                 <div>
-                    <label class="label">
-                        <div class="toggle">
-                          <input class="toggle-state" type="checkbox" name="check" value="check" />
-                          <div class="indicator"></div>
+                    <label class="weather-label">
+                        <div class="weather-toggle">
+                          <input class="weather-toggle-state" type="checkbox" name="check" value="check" />
+                          <div class="weather-indicator"></div>
                         </div>
                     </label>
                 </div>
             </div>
         
         </div>
+        
 
         <div class="car-container">
-            <div class="map-text">Select Map</div>
-                <span id="slider-image1" style="padding: 0%;"></span>
-                <span id="slider-image2" style="padding: 0%;"></span>
-                <span id="slider-image3" style="padding: 0%;"></span>
-                <div class="img-container">
-                    <img src="img/car1.png" class="slider-image">
-                    <img src="img/car2.png" class="slider-image">
-                    <img src="img/car1.png" class="slider-image">
+            <div class="car-text">Select Car</div>
+                <div class="car-img-container" style="left: -165px;">
+                    <img src="img/car1.png" class="car-slider-image">
+                    <img src="img/car2.png" class="car-slider-image">
+                    <img src="img/car3.png" class="car-slider-image">
                 </div>
-                <div class="map-button-container">
-                    <a href="#slider-image1" class="slider-button"></a>
-                    <a href="#slider-image2" class="slider-button"></a>
-                    <a href="#slider-image3" class="slider-button"></a>
+                <div class="car-button-container">
+                    <input type="button" onclick="carbtnonclick('1')" class="car-slider-button" id="car-button1">
+                    <input type="button" onclick="carbtnonclick('2')" class="car-slider-button" id="car-button2">
+                    <input type="button" onclick="carbtnonclick('3')" class="car-slider-button" id="car-button3">
                 </div>
+        </div>
+        <div class="apply-button">
+            <input type="button" value="Apply Changes" class="applybuttoninput" onclick="applyclick('True')">
         </div>
     </div>
     
-    <div class="events-container"></div>
+    <div class="events-container">
+
+
+    </div>
          
      
  

@@ -58,7 +58,6 @@ header{
   width: 1000px;
   height: 150px;
   margin-left: 24px;
-
   position: relative;
   padding-bottom: 5px;
   transition: left 2s;
@@ -82,7 +81,7 @@ header{
   
 }
 
-.slider-button{
+.map-slider-button{
   display: inline-block;
   margin-top: -20px;
   height: 10px;
@@ -91,17 +90,7 @@ header{
   background-color: seashell;
 }
 
-#slider-image1:target ~.img-container{
-    left: 0px;
-}
 
-#slider-image2:target~.img-container{
-  left: -165px;
-}
-
-#slider-image3:target~.img-container{
-  left: -330px;
-}
 .extras-container{
   width: 300px;
   height: 150px;
@@ -183,17 +172,49 @@ box-shadow: inset 8px 8px 16px #1d1f23,
   overflow: hidden;
   float: left;
   margin-left: 40px;
-  margin-top: 40px;
+  margin-top: 5px;
   border-radius: 53px;
-background: #26292f;
-box-shadow:  11px 11px 22px #1b1e22, 
-             -11px -11px 22px #31343c;
+  background: #26292f;
+  box-shadow: inset 8px 8px 16px #191b1f, 
+              inset -8px -8px 16px #33373f;
+}
+
+.apply-button{
+  width: 100px;
+  height: 50px;
+  float: left;
+  margin-left: 120px;
+  margin-top: 30px;
+  border-radius: 53px;
+  background: transparent;
+}
+
+.applybuttoninput{
+  width: 150px;
+  height: 50px;
+  border-radius: 53px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
   color: #00ff57;
- 
+  font-weight: bold;
+  text-align: center;
+  font-family: 'lato', sans-serif;
+  background: #26292f;
+  box-shadow: 3px 3px 8px #191b1f, 
+            -3px -3px 8px #33373f;
+  transition: 0.5s;
+}
+
+.applybuttoninput:hover{
+  background: #33373f;
+  color: #00ff57;
+
 }
 
 
-.button-container{
+.weather-button-container{
   
   height: 60px;
   margin-top: 6px;
@@ -202,24 +223,36 @@ box-shadow:  11px 11px 22px #1b1e22,
   padding-top: 10px;
   padding-bottom: 5px;
 }
-.button-container1{
+.weather-button-container1{
   display: inline;
   float: left;
 }
-.button-container1.toggle-button-img{
+.weather-button-container1.weather-toggle-button-img{
   width: 55px;
   height: 55px;
-  background-color: purple;
+  
 }
-.button-container1.toggle-button-img.img1{
-  background: url(img/car.png);
+
+.weather-button-container1.weather-toggle-button-img.img1{
+  background: url(img/Rain.png);
+  background-repeat: no-repeat;
+  background-size: 50px 50px; 
+}
+.weather-button-container1.weather-toggle-button-img.img2{
+  background: url(img/sunny.png);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+
+}
+.weather-button-container1.weather-toggle-button-img.img3{
+  background: url(img/foggyday.png);
   background-repeat: no-repeat;
   background-size: 50px 50px;
 
 }
 
 /*Weather Button*/
-.label {
+.weather-label {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
@@ -229,7 +262,7 @@ box-shadow:  11px 11px 22px #1b1e22,
   margin-right: 10px;
 }
 
-.toggle {
+.weather-toggle {
   isolation: isolate;
   position: relative;
   height: 30px;
@@ -243,11 +276,11 @@ box-shadow:  11px 11px 22px #1b1e22,
     -4px -4px 4px 0px #313131 inset;
 }
 
-.toggle-state {
+.weather-toggle-state {
   display: none;
 }
 
-.indicator {
+.weather-indicator {
   height: 100%;
   width: 200%;
   background: #ecf0f3;
@@ -259,19 +292,14 @@ box-shadow:  11px 11px 22px #1b1e22,
     8px 4px 12px 0px #929394;
 }
 
-.toggle-state:checked ~ .indicator {
+.weather-toggle-state:checked ~ .weather-indicator {
   transform: translate3d(25%, 0, 0);
   background:#00ff57 ;
 }
 
-.button-container1.toggle-button-img.img2{
-  background: url(img/Rain.png);
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
-  
-}
 
-.toggle-text{
+
+.weather-toggle-text{
   text-align: left;
   font-size: 16px;
   padding-left: 10px;
@@ -323,3 +351,50 @@ box-shadow:  11px 11px 22px #1b1e22,
   transform: translate3d(25%, 0, 0);
   background:#00ff57 ;
 }
+
+
+
+.car-text{
+  margin-bottom: -20px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.car-img-container{
+  width: 1000px;
+  height: 150px;
+  margin-left: 24px;
+
+  position: relative;
+  padding-bottom: 5px;
+  transition: left 2s;
+  margin-top: 8px;
+  -webkit-transition: left 2s;;
+}
+
+.car-slider-image{
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+
+  width: auto;
+  height: 150px;
+  border-radius: 40px;
+}
+
+.car-button-container{
+  margin-top: -50px;
+  position: relative;
+  
+}
+
+.car-slider-button{
+  display: inline-block;
+  margin-top: -20px;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: seashell;
+}
+
+
